@@ -107,24 +107,8 @@ class MainPage extends StatelessWidget {
           children: [
             Column(
               children: [
-                Container(
-                  child: Image(
-                    image: AssetImage('assets/Gramedia.png'),
-                    height: 150,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                Container(
-                  child: Text(
-                    "Menu Data Buku",
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        wordSpacing: 10,
-                        decoration: TextDecoration.overline),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
+                MyApp().gamberHeader(),
+                MyApp().teksHeader("Input Data Buku"),
                 Row(
                   children: <Widget>[
                     Expanded(

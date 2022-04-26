@@ -33,6 +33,29 @@ class MyApp extends StatelessWidget {
     );
   }
 
+  Widget gamberHeader() {
+    return Container(
+      child: Image(
+        image: AssetImage('assets/Gramedia.png'),
+        height: 150,
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+
+  Widget teksHeader(String teks) {
+    return Container(
+        child: Text(
+      teks,
+      style: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          wordSpacing: 10,
+          decoration: TextDecoration.overline),
+      textAlign: TextAlign.center,
+    ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:posttest4_1915016048_muchlismardais/main.dart';
 
 class InputDataPage extends StatefulWidget {
   const InputDataPage({Key? key}) : super(key: key);
@@ -104,24 +105,8 @@ class _InputDataPageState extends State<InputDataPage> {
         children: [
           Column(
             children: [
-              Container(
-                child: Image(
-                  image: AssetImage('assets/Gramedia.png'),
-                  height: 150,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              Container(
-                child: Text(
-                  "Input Data Buku",
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      wordSpacing: 10,
-                      decoration: TextDecoration.overline),
-                  textAlign: TextAlign.center,
-                ),
-              ),
+              MyApp().gamberHeader(),
+              MyApp().teksHeader("Input Data Buku"),
               Container(
                 padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
                 child: Column(
