@@ -50,7 +50,6 @@ class _InputDataPageState extends State<InputDataPage> {
   String hargaBuku = "";
   String jumlahHalamanBuku = "";
   String language = "";
-  Color color = Colors.white;
 
   final namaBukuCtrl = TextEditingController();
   final penulisBukuCtrl = TextEditingController();
@@ -100,7 +99,7 @@ class _InputDataPageState extends State<InputDataPage> {
                   colors: <Color>[Colors.orangeAccent, Colors.blue])),
         ),
       ),
-      backgroundColor: color,
+      backgroundColor: Colors.white,
       body: ListView(
         children: [
           Column(
