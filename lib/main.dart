@@ -10,6 +10,29 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  Widget gambar(String path, String judul) {
+    return Container(
+      margin: EdgeInsets.all(10.0),
+      child: Column(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(17.0),
+            child: Image(
+              image: AssetImage('assets/' + path),
+              height: 240,
+              fit: BoxFit.cover,
+            ),
+          ),
+          Text(
+            judul,
+            style: TextStyle(fontSize: 12, color: Colors.black),
+            textAlign: TextAlign.center,
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

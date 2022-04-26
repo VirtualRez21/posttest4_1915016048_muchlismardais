@@ -1,39 +1,16 @@
-// ignore_for_file: file_names, prefer_const_constructors, unnecessary_new, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
+// ignore_for_file: file_names, prefer_const_constructors, unnecessary_new, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers, unnecessary_string_escapes
 
 import 'package:flutter/material.dart';
+import 'package:posttest4_1915016048_muchlismardais/main.dart';
 import 'package:posttest4_1915016048_muchlismardais/mainPage.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({Key? key}) : super(key: key);
-
   @override
   State<LandingPage> createState() => _LandingPageState();
 }
 
 class _LandingPageState extends State<LandingPage> {
-  Widget gambar(String path, String judul) {
-    return Container(
-      margin: EdgeInsets.all(10.0),
-      child: Column(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(17.0),
-            child: Image(
-              image: AssetImage('assets/' + path),
-              height: 240,
-              fit: BoxFit.cover,
-            ),
-          ),
-          Text(
-            judul,
-            style: TextStyle(fontSize: 12, color: Colors.black),
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget teksLandingPage(String teks, double size, Color warna) {
     return Text(
       teks,
@@ -57,21 +34,20 @@ class _LandingPageState extends State<LandingPage> {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
-                        gambar('a.jpg', 'Demon Slayer'),
-                        gambar('b.jpg', 'Jujutsu Kaisen'),
-                        gambar('c.jpg', 'Home Sweet Loan'),
-                        gambar('d.jpg', 'Pagi di Amerika'),
-                        gambar('e.jpg', 'Al-Qur\'an Cordoba'),
-                        gambar('f.jpg', 'Pilar-Pilar Peradaban')
+                        MyApp().gambar('a.jpg', 'Demon Slayer'),
+                        MyApp().gambar('b.jpg', 'Jujutsu Kaisen'),
+                        MyApp().gambar('c.jpg', 'Home Sweet Loan'),
+                        MyApp().gambar('d.jpg', 'Pagi di Amerika'),
+                        MyApp().gambar('e.jpg', 'Al-Qur\'an Cordoba'),
+                        MyApp().gambar('f.jpg', 'Pilar-Pilar Peradaban')
                       ],
                     ),
                   ),
                   Container(
                     child: Image(
-                      image: AssetImage('assets/' + 'Gramedia.png'),
+                      image: AssetImage('assets/Gramedia.png'),
                       height: 200,
                       width: 20,
-                      // fit: BoxFit.cover,
                     ),
                   ),
                   Column(
