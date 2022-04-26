@@ -108,7 +108,7 @@ class MainPage extends StatelessWidget {
             Column(
               children: [
                 MyApp().gamberHeader(),
-                MyApp().teksHeader("Input Data Buku"),
+                MyApp().teksHeader("Menu Data Buku"),
                 Row(
                   children: <Widget>[
                     Expanded(
